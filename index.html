@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>color</title>
+</head>
+<body>
+    </style>
+  </head>
+  <body>
+    <h1>Change Background Color</h1>
+    <p>Enter an English color name:</p>
+    <input type="text" id="color-input">
+    <button onclick="changeColor()">Paint</button>
+    
+    <script>
+      function changeColor() {
+        var input = document.getElementById("color-input").value.toLowerCase();
+        var colors = {
+          "red": "#ff0000",
+          "blue": "#0000ff",
+          "green": "#00ff00",
+          "yellow": "#ffff00",
+          "orange": "#ffa500",
+          "purple": "#800080",
+          "pink": "#ffc0cb",
+          "brown": "#a52a2a",
+          "black": "#000000",
+          "white": "#ffffff"
+        };
+        if (colors.hasOwnProperty(input)) {
+          document.body.style.backgroundColor = colors[input];
+        } else {
+          document.body.style.backgroundColor = "red";
+        }
+      }
+    </script>
+</body>
+</html>
